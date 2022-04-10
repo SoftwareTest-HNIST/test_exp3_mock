@@ -1,5 +1,6 @@
 /**
  * 为进行MOCK测试修改后的MainRun类
+ * 
  */
 public class MainRun {
     private IData iData;
