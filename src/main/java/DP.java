@@ -62,18 +62,11 @@ public class DP implements IData {
             for (int j = 0; j < getRoom()[0].length; j++) {
                 if (j + 1 < 10) {
                     s.append(i).append(1).append("0").append(j + 1);
-//                    System.out.println(i + 1 + "0" + (j + 1) + "");
                 } else {
-//                    System.out.println(i + 1 + "" + (j + 1) + "");
                     s.append(i).append(1).append(j + 1);
                 }
                 ;
             }
-            /*System.out.println();
-            for (int j = 0; j < getRoom()[0].length; j++) {
-                System.out.println(getRoom()[i][j] + "   ");
-            }
-            System.out.println();*/
         }
         return s.toString();
     }
