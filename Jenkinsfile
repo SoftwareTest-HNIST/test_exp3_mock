@@ -14,9 +14,11 @@ pipeline {
         stage('Publish SpotBugs') {
             steps {
                  sh 'mvn spotbugs:spotbugs'
+                 sh 'mvn spotbugs:check'
                  recordIssues(
                     tools: [spotBugs(useRankAsPriority: true)]
                  )
+                 sh 'mvn site'
             }
         }
         stage('Test') {
