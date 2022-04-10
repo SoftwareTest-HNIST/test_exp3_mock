@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class DP implements IData {
     private static String[][] rooms;
 
@@ -11,6 +9,11 @@ public class DP implements IData {
                 rooms[i][j] = "empty";
             }
         }
+    }
+
+    @Override
+    public String in_Out_Room(int roomNo, String name) {
+        return null;
     }
 
     @Override
@@ -48,6 +51,11 @@ public class DP implements IData {
         return rooms[(roomNo / 100) - 1][(roomNo % 100) - 1];
     }
 
+    @Override
+    public void Search() {
+
+    }
+
     public int roomNo(int roomNo) {
         if ("empty".equals(rooms[(roomNo / 100) - 1][(roomNo % 100) - 1])) {
             return roomNo;
@@ -56,19 +64,22 @@ public class DP implements IData {
         }
     }
 
-    public static String search() {
-        StringBuilder s = new StringBuilder();
-        for (int i = 0; i < getRoom().length; i++) {
-            for (int j = 0; j < getRoom()[0].length; j++) {
-                if (j + 1 < 10) {
-                    s.append(i).append(1).append("0").append(j + 1);
-                } else {
-                    s.append(i).append(1).append(j + 1);
+    public String search() {
+        for(int i = 0; i<rooms.length;i++){
+            for (int j = 0;j<rooms[0].length;j++){
+                if(j+1<10){
+                    System.out.print(i+1+"0"+(j+1) + "\t\t");
+                }else {
+                    System.out.print(i+1+""+(j+1) + "\t\t");
                 }
-                ;
             }
+            System.out.println();
+            for (int j = 0;j<rooms[0].length;j++){
+                System.out.print(rooms[i][j] + "\t");
+            }
+            System.out.println();
         }
-        return s.toString();
+        return null;
     }
 
     public static String[][] getRoom() {
