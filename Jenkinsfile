@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Publish SpotBugs') {
             steps {
+                 sh 'mvn spotbugs:spotbugs'
                  recordIssues(
                     tools: [spotBugs(useRankAsPriority: true)]
                  )
