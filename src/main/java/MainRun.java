@@ -4,6 +4,7 @@
  */
 public class MainRun {
     IData iData;
+    private static String[][] rooms;        //表示房间
     public MainRun(IData iData){
         this.iData = iData;
     }
@@ -21,5 +22,9 @@ public class MainRun {
 
     public void iniRooms() {
         iData.iniRooms();
+    }
+    public String[][] getRoom()
+    {
+        return rooms;
     }
 }
