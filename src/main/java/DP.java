@@ -16,10 +16,11 @@ public class DP implements IData {
         return null;
     }
 
-    @Override
+
     /**
      * 修改后MainRun类中的command方法
      */
+    @Override
     public String command(String comm, int roomNo, String name) {
         if ("search".equalsIgnoreCase(comm)) {
             return search();
@@ -51,6 +52,7 @@ public class DP implements IData {
         return rooms[(roomNo / 100) - 1][(roomNo % 100) - 1];
     }
 
+
     @Override
     public void Search() {
 
@@ -64,6 +66,7 @@ public class DP implements IData {
         }
     }
 
+    @Override
     public String search() {
         for (int i = 0; i < rooms.length; i++) {
             for (int j = 0; j < rooms[0].length; j++) {

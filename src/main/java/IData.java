@@ -9,3 +9,6 @@ public interface IData {
 
     public String command(String comm, int roomNo, String name);
 }
+
+
+
